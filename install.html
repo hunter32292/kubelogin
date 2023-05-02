@@ -1,37 +1,39 @@
 <!DOCTYPE HTML>
 <html lang="en" class="sidebar-visible no-js light">
-    <head>
-        <!-- Book generated using mdBook -->
-        <meta charset="UTF-8">
-        <title>Installation - Azure Kubelogin</title>
+
+<head>
+    <!-- Book generated using mdBook -->
+    <meta charset="UTF-8">
+    <title>Installation - Azure Kubelogin</title>
 
 
-        <!-- Custom HTML head -->
-        
-        <meta name="description" content="A Kubernetes credential (exec) plugin implementing azure authentication">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="theme-color" content="#ffffff" />
+    <!-- Custom HTML head -->
 
-        <link rel="icon" href="favicon.svg">
-        <link rel="shortcut icon" href="favicon.png">
-        <link rel="stylesheet" href="css/variables.css">
-        <link rel="stylesheet" href="css/general.css">
-        <link rel="stylesheet" href="css/chrome.css">
-        <link rel="stylesheet" href="css/print.css" media="print">
+    <meta name="description" content="A Kubernetes credential (exec) plugin implementing azure authentication">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#ffffff" />
 
-        <!-- Fonts -->
-        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
-        <link rel="stylesheet" href="fonts/fonts.css">
+    <link rel="icon" href="favicon.svg">
+    <link rel="shortcut icon" href="favicon.png">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/chrome.css">
+    <link rel="stylesheet" href="css/print.css" media="print">
 
-        <!-- Highlight.js Stylesheets -->
-        <link rel="stylesheet" href="highlight.css">
-        <link rel="stylesheet" href="tomorrow-night.css">
-        <link rel="stylesheet" href="ayu-highlight.css">
+    <!-- Fonts -->
+    <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+    <link rel="stylesheet" href="fonts/fonts.css">
 
-        <!-- Custom theme stylesheets -->
+    <!-- Highlight.js Stylesheets -->
+    <link rel="stylesheet" href="highlight.css">
+    <link rel="stylesheet" href="tomorrow-night.css">
+    <link rel="stylesheet" href="ayu-highlight.css">
 
-    </head>
-    <body>
+    <!-- Custom theme stylesheets -->
+
+</head>
+
+<body>
     <div id="body-container">
         <!-- Provide site root to javascript -->
         <script>
@@ -58,7 +60,7 @@
         <!-- Set the theme before any content is loaded, prevents flash -->
         <script>
             var theme;
-            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            try { theme = localStorage.getItem('mdbook-theme'); } catch (e) { }
             if (theme === null || theme === undefined) { theme = default_theme; }
             var html = document.querySelector('html');
             html.classList.remove('no-js')
@@ -72,7 +74,7 @@
             var html = document.querySelector('html');
             var sidebar = 'hidden';
             if (document.body.clientWidth >= 1080) {
-                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch (e) { }
                 sidebar = sidebar || 'visible';
             }
             html.classList.remove('sidebar-visible');
@@ -81,7 +83,89 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="index.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="install.html" class="active"><strong aria-hidden="true">2.</strong> Installation</a></li><li class="chapter-item expanded "><a href="quick-start.html"><strong aria-hidden="true">3.</strong> Quick Start</a></li><li class="chapter-item expanded "><a href="concepts.html"><strong aria-hidden="true">4.</strong> Concepts</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="concepts/exec-plugin.html"><strong aria-hidden="true">4.1.</strong> Exec Plugin</a></li><li class="chapter-item expanded "><a href="concepts/login-modes.html"><strong aria-hidden="true">4.2.</strong> Login Modes</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="concepts/login-modes/devicecode.html"><strong aria-hidden="true">4.2.1.</strong> Device Code</a></li><li class="chapter-item expanded "><a href="concepts/login-modes/azurecli.html"><strong aria-hidden="true">4.2.2.</strong> Azure CLI</a></li><li class="chapter-item expanded "><a href="concepts/login-modes/interactive.html"><strong aria-hidden="true">4.2.3.</strong> Web Browser Interactive</a></li><li class="chapter-item expanded "><a href="concepts/login-modes/sp.html"><strong aria-hidden="true">4.2.4.</strong> Service Principal</a></li><li class="chapter-item expanded "><a href="concepts/login-modes/msi.html"><strong aria-hidden="true">4.2.5.</strong> Managed Service Identity</a></li><li class="chapter-item expanded "><a href="concepts/login-modes/workloadidentity.html"><strong aria-hidden="true">4.2.6.</strong> Workload Identity</a></li><li class="chapter-item expanded "><a href="concepts/login-modes/ropc.html"><strong aria-hidden="true">4.2.7.</strong> Resource Owner Password Credential</a></li></ol></li><li class="chapter-item expanded "><a href="concepts/aks.html"><strong aria-hidden="true">4.3.</strong> Using kubelogin with AKS</a></li></ol></li><li class="chapter-item expanded "><a href="cli-reference.html"><strong aria-hidden="true">5.</strong> Command-Line Tool</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="cli/convert-kubeconfig.html"><strong aria-hidden="true">5.1.</strong> convert-kubeconfig</a></li><li class="chapter-item expanded "><a href="cli/get-token.html"><strong aria-hidden="true">5.2.</strong> get-token</a></li><li class="chapter-item expanded "><a href="cli/remove-tokens.html"><strong aria-hidden="true">5.3.</strong> remove-tokens</a></li></ol></li><li class="chapter-item expanded "><a href="topics.html"><strong aria-hidden="true">6.</strong> Topics</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="topics/environments.html"><strong aria-hidden="true">6.1.</strong> Using in different environments</a></li><li class="chapter-item expanded "><a href="topics/sp.html"><strong aria-hidden="true">6.2.</strong> Using Service Principal</a></li><li class="chapter-item expanded "><a href="topics/k8s-oidc-aad.html"><strong aria-hidden="true">6.3.</strong> Setup k8s OIDC Provider using Azure AD</a></li><li class="chapter-item expanded "><a href="topics/jenkins.html"><strong aria-hidden="true">6.4.</strong> Using kubelogin in Jenkins</a></li></ol></li><li class="chapter-item expanded "><a href="known-issues.html"><strong aria-hidden="true">7.</strong> Known Issues</a></li><li class="chapter-item expanded "><a href="development.html"><strong aria-hidden="true">8.</strong> Development</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="development/releasing.html"><strong aria-hidden="true">8.1.</strong> Releasing</a></li></ol></li><li class="chapter-item expanded "><a href="contributing.html"><strong aria-hidden="true">9.</strong> Contributing</a></li><li class="chapter-item expanded "><a href="code-of-conduct.html"><strong aria-hidden="true">10.</strong> Code of Conduct</a></li></ol>
+                <ol class="chapter">
+                    <li class="chapter-item expanded "><a href="index.html"><strong aria-hidden="true">1.</strong>
+                            Introduction</a></li>
+                    <li class="chapter-item expanded "><a href="install.html" class="active"><strong
+                                aria-hidden="true">2.</strong> Installation</a></li>
+                    <li class="chapter-item expanded "><a href="quick-start.html"><strong aria-hidden="true">3.</strong>
+                            Quick Start</a></li>
+                    <li class="chapter-item expanded "><a href="concepts.html"><strong aria-hidden="true">4.</strong>
+                            Concepts</a></li>
+                    <li>
+                        <ol class="section">
+                            <li class="chapter-item expanded "><a href="concepts/exec-plugin.html"><strong
+                                        aria-hidden="true">4.1.</strong> Exec Plugin</a></li>
+                            <li class="chapter-item expanded "><a href="concepts/login-modes.html"><strong
+                                        aria-hidden="true">4.2.</strong> Login Modes</a></li>
+                            <li>
+                                <ol class="section">
+                                    <li class="chapter-item expanded "><a
+                                            href="concepts/login-modes/devicecode.html"><strong
+                                                aria-hidden="true">4.2.1.</strong> Device Code</a></li>
+                                    <li class="chapter-item expanded "><a
+                                            href="concepts/login-modes/azurecli.html"><strong
+                                                aria-hidden="true">4.2.2.</strong> Azure CLI</a></li>
+                                    <li class="chapter-item expanded "><a
+                                            href="concepts/login-modes/interactive.html"><strong
+                                                aria-hidden="true">4.2.3.</strong> Web Browser Interactive</a></li>
+                                    <li class="chapter-item expanded "><a href="concepts/login-modes/sp.html"><strong
+                                                aria-hidden="true">4.2.4.</strong> Service Principal</a></li>
+                                    <li class="chapter-item expanded "><a href="concepts/login-modes/msi.html"><strong
+                                                aria-hidden="true">4.2.5.</strong> Managed Service Identity</a></li>
+                                    <li class="chapter-item expanded "><a
+                                            href="concepts/login-modes/workloadidentity.html"><strong
+                                                aria-hidden="true">4.2.6.</strong> Workload Identity</a></li>
+                                    <li class="chapter-item expanded "><a href="concepts/login-modes/ropc.html"><strong
+                                                aria-hidden="true">4.2.7.</strong> Resource Owner Password
+                                            Credential</a></li>
+                                </ol>
+                            </li>
+                            <li class="chapter-item expanded "><a href="concepts/aks.html"><strong
+                                        aria-hidden="true">4.3.</strong> Using kubelogin with AKS</a></li>
+                        </ol>
+                    </li>
+                    <li class="chapter-item expanded "><a href="cli-reference.html"><strong
+                                aria-hidden="true">5.</strong> Command-Line Tool</a></li>
+                    <li>
+                        <ol class="section">
+                            <li class="chapter-item expanded "><a href="cli/convert-kubeconfig.html"><strong
+                                        aria-hidden="true">5.1.</strong> convert-kubeconfig</a></li>
+                            <li class="chapter-item expanded "><a href="cli/get-token.html"><strong
+                                        aria-hidden="true">5.2.</strong> get-token</a></li>
+                            <li class="chapter-item expanded "><a href="cli/remove-tokens.html"><strong
+                                        aria-hidden="true">5.3.</strong> remove-tokens</a></li>
+                        </ol>
+                    </li>
+                    <li class="chapter-item expanded "><a href="topics.html"><strong aria-hidden="true">6.</strong>
+                            Topics</a></li>
+                    <li>
+                        <ol class="section">
+                            <li class="chapter-item expanded "><a href="topics/environments.html"><strong
+                                        aria-hidden="true">6.1.</strong> Using in different environments</a></li>
+                            <li class="chapter-item expanded "><a href="topics/sp.html"><strong
+                                        aria-hidden="true">6.2.</strong> Using Service Principal</a></li>
+                            <li class="chapter-item expanded "><a href="topics/k8s-oidc-aad.html"><strong
+                                        aria-hidden="true">6.3.</strong> Setup k8s OIDC Provider using Azure AD</a></li>
+                            <li class="chapter-item expanded "><a href="topics/jenkins.html"><strong
+                                        aria-hidden="true">6.4.</strong> Using kubelogin in Jenkins</a></li>
+                        </ol>
+                    </li>
+                    <li class="chapter-item expanded "><a href="known-issues.html"><strong
+                                aria-hidden="true">7.</strong> Known Issues</a></li>
+                    <li class="chapter-item expanded "><a href="development.html"><strong aria-hidden="true">8.</strong>
+                            Development</a></li>
+                    <li>
+                        <ol class="section">
+                            <li class="chapter-item expanded "><a href="development/releasing.html"><strong
+                                        aria-hidden="true">8.1.</strong> Releasing</a></li>
+                        </ol>
+                    </li>
+                    <li class="chapter-item expanded "><a href="contributing.html"><strong
+                                aria-hidden="true">9.</strong> Contributing</a></li>
+                    <li class="chapter-item expanded "><a href="code-of-conduct.html"><strong
+                                aria-hidden="true">10.</strong> Code of Conduct</a></li>
+                </ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -89,13 +173,16 @@
         <div id="page-wrapper" class="page-wrapper">
 
             <div class="page">
-                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar-hover-placeholder"></div>
                 <div id="menu-bar" class="menu-bar sticky bordered">
                     <div class="left-buttons">
-                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents"
+                            aria-label="Toggle Table of Contents" aria-controls="sidebar">
                             <i class="fa fa-bars"></i>
                         </button>
-                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme"
+                            aria-label="Change theme" aria-haspopup="true" aria-expanded="false"
+                            aria-controls="theme-list">
                             <i class="fa fa-paint-brush"></i>
                         </button>
                         <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
@@ -105,7 +192,9 @@
                             <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
                         </ul>
-                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)"
+                            aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S"
+                            aria-controls="searchbar">
                             <i class="fa fa-search"></i>
                         </button>
                     </div>
@@ -125,7 +214,8 @@
 
                 <div id="search-wrapper" class="hidden">
                     <form id="searchbar-outer" class="searchbar-outer">
-                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..."
+                            aria-controls="searchresults-outer" aria-describedby="searchresults-header">
                     </form>
                     <div id="searchresults-outer" class="searchresults-outer hidden">
                         <div id="searchresults-header" class="searchresults-header"></div>
@@ -138,7 +228,7 @@
                 <script>
                     document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
                     document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
-                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function (link) {
                         link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
                     });
                 </script>
@@ -146,27 +236,32 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="installation"><a class="header" href="#installation">Installation</a></h1>
-<h2 id="download-from-release"><a class="header" href="#download-from-release">Download from Release</a></h2>
-<p>Copy the latest <a href="https://github.com/Azure/kubelogin/releases">Releases</a> to shell’s search path.</p>
-<h2 id="homebrew"><a class="header" href="#homebrew">Homebrew</a></h2>
-<pre><code class="language-sh"># install
+                        <h2 id="download-from-release"><a class="header" href="#download-from-release">Download from
+                                Release</a></h2>
+                        <p>Copy the latest <a href="https://github.com/Azure/kubelogin/releases">Releases</a> to shell’s
+                            search path.</p>
+                        <h2 id="homebrew"><a class="header" href="#homebrew">Homebrew</a></h2>
+                        <pre><code class="language-sh"># install
 brew install Azure/kubelogin/kubelogin
 
 # upgrade
 brew update
 brew upgrade Azure/kubelogin/kubelogin
 </code></pre>
-<h2 id="linux"><a class="header" href="#linux">Linux</a></h2>
-<h3 id="using-azure-cli"><a class="header" href="#using-azure-cli-linux">Using <a href="https://learn.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest#az-aks-install-cli">az aks install-cli</a></a></h3>
-<pre><code class="language-sh"># install
-# Command may require sudo
+                        <h2 id="linux"><a class="header" href="#linux">Linux</a></h2>
+                        <h3 id="using-azure-cli"><a class="header" href="#using-azure-cli-linux">Using <a
+                                    href="https://learn.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest#az-aks-install-cli">az
+                                    aks install-cli</a></a></h3>
+                        <pre><code class="language-sh"># install
+# command may require sudo
 az aks install-cli
-# Confirm kubelogin is installed
+# confirm kubelogin is installed
 which kubelogin
-</code></pre>     
-<h3 id="using-asdf"><a class="header" href="#using-asdf">Using <a href="https://asdf-vm.com/">asdf</a></a></h3>
-<p><em>asdf and the asdf-kubelogin plugin are not maintained by Microsoft.</em></p>
-<pre><code class="language-sh"># install
+</code></pre>
+                        <h3 id="using-asdf"><a class="header" href="#using-asdf">Using <a
+                                    href="https://asdf-vm.com/">asdf</a></a></h3>
+                        <p><em>asdf and the asdf-kubelogin plugin are not maintained by Microsoft.</em></p>
+                        <pre><code class="language-sh"># install
 asdf plugin add kubelogin https://github.com/sechmann/asdf-kubelogin
 asdf install kubelogin latest
 asdf global kubelogin latest
@@ -177,20 +272,20 @@ asdf plugin update kubelogin
 asdf install kubelogin latest
 asdf global kubelogin latest
 </code></pre>
-<h2 id="windows"><a class="header" href="#windows">Windows</a></h2>
-<h3 id="using-winget"><a class="header" href="#using-winget">Using winget</a></h3>
-<p>From Powershell:</p>
-<pre><code class="language-powershell">winget install --id=Kubernetes.kubectl  -e
+                        <h2 id="windows"><a class="header" href="#windows">Windows</a></h2>
+                        <h3 id="using-winget"><a class="header" href="#using-winget">Using winget</a></h3>
+                        <p>From Powershell:</p>
+                        <pre><code class="language-powershell">winget install --id=Kubernetes.kubectl  -e
 winget install --id=Microsoft.Azure.Kubelogin  -e
 </code></pre>
-<h3 id="using-scoop"><a class="header" href="#using-scoop">Using scoop</a></h3>
-<p>This package is not maintained by Microsoft.</p>
-<p>From Powershell:</p>
-<pre><code class="language-powershell">scoop install kubectl azure-kubelogin
+                        <h3 id="using-scoop"><a class="header" href="#using-scoop">Using scoop</a></h3>
+                        <p>This package is not maintained by Microsoft.</p>
+                        <p>From Powershell:</p>
+                        <pre><code class="language-powershell">scoop install kubectl azure-kubelogin
 </code></pre>
-<h3 id="using-azure-cli"><a class="header" href="#using-azure-cli">Using azure cli</a></h3>
-<p>From Powershell:</p>
-<pre><code class="language-powershell">az aks install-cli
+                        <h3 id="using-azure-cli"><a class="header" href="#using-azure-cli">Using azure cli</a></h3>
+                        <p>From Powershell:</p>
+                        <pre><code class="language-powershell">az aks install-cli
 $targetDir=&quot;$env:USERPROFILE\.azure-kubelogin&quot;
 $oldPath = [System.Environment]::GetEnvironmentVariable(&quot;Path&quot;,&quot;User&quot;)
 $oldPathArray=($oldPath) -split &quot;;&quot;
@@ -206,13 +301,15 @@ if(-Not($oldPathArray -Contains &quot;$targetDir&quot;)) {
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
-                                <i class="fa fa-angle-left"></i>
-                            </a>
+                        <a rel="prev" href="index.html" class="mobile-nav-chapters previous" title="Previous chapter"
+                            aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <i class="fa fa-angle-left"></i>
+                        </a>
 
-                            <a rel="next" href="quick-start.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                                <i class="fa fa-angle-right"></i>
-                            </a>
+                        <a rel="next" href="quick-start.html" class="mobile-nav-chapters next" title="Next chapter"
+                            aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <i class="fa fa-angle-right"></i>
+                        </a>
 
                         <div style="clear: both"></div>
                     </nav>
@@ -220,13 +317,15 @@ if(-Not($oldPathArray -Contains &quot;$targetDir&quot;)) {
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
-                        <i class="fa fa-angle-left"></i>
-                    </a>
+                <a rel="prev" href="index.html" class="nav-chapters previous" title="Previous chapter"
+                    aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <i class="fa fa-angle-left"></i>
+                </a>
 
-                    <a rel="next" href="quick-start.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                        <i class="fa fa-angle-right"></i>
-                    </a>
+                <a rel="next" href="quick-start.html" class="nav-chapters next" title="Next chapter"
+                    aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <i class="fa fa-angle-right"></i>
+                </a>
             </nav>
 
         </div>
@@ -251,5 +350,6 @@ if(-Not($oldPathArray -Contains &quot;$targetDir&quot;)) {
 
 
     </div>
-    </body>
+</body>
+
 </html>
